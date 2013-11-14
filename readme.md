@@ -4,7 +4,7 @@ Craft Typogrify prettifies your web typography by preventing ugly quotes and 'wi
 
 ## Installation
 
-* Rename the folder to **typogrify** and copy it into your **craft/plugins/** folder. Ex, **craft/plugins/typogrify**
+* Place the **typogrify** folder inside your **craft/plugins/** folder.
 * Go to **settings/plugins** and install typogrify
 
 ## Usage
