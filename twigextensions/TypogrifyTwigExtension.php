@@ -3,7 +3,7 @@
 namespace Craft;
 
 require_once(CRAFT_PLUGINS_PATH . 'typogrify/lib/smartypants.php');
-require(CRAFT_PLUGINS_PATH . 'typogrify/lib/php-typogrify.php');
+require_once(CRAFT_PLUGINS_PATH . 'typogrify/lib/php-typogrify.php');
 
 class TypogrifyTwigExtension extends \Twig_Extension
 {
