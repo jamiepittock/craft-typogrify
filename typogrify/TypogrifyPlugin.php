@@ -23,7 +23,7 @@ class TypogrifyPlugin extends BasePlugin
         return 'http://withchief.com';
     }
 
-    public function hookAddTwigExtension()
+    public function addTwigExtension()
     {
         Craft::import('plugins.typogrify.twigextensions.TypogrifyTwigExtension');
         return new TypogrifyTwigExtension();
