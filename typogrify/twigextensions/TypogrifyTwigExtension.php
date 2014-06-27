@@ -22,6 +22,7 @@ class TypogrifyTwigExtension extends \Twig_Extension
             'caps' => new \Twig_Filter_Method($this, 'capsFilter'),
             'initial_quotes' => new \Twig_Filter_Method($this, 'initialQuotesFilter'),
             'dash' => new \Twig_Filter_Method($this, 'dashFilter'),
+            'breakslash' => new \Twig_Filter_Method($this, 'breakslashFilter'),
             'typogrify' => new \Twig_Filter_Method($this, 'typogrifyFilter')
         );
     }
@@ -76,6 +77,15 @@ class TypogrifyTwigExtension extends \Twig_Extension
         $charset = craft()->templates->getTwig()->getCharset();
 
         $str = dash($str);
+
+        return new \Twig_Markup($str, $charset);
+    }
+    
+    public function breakslashFilter($str)
+    {
+        $charset = craft()->templates->getTwig()->getCharset();
+
+        $str = amp($str);
 
         return new \Twig_Markup($str, $charset);
     }
