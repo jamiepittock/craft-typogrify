@@ -227,6 +227,20 @@ function widont( $text )
 }
 
 /**
+ * breakslash
+ * 
+ * Allows for a line break after a slash. Works by adding ``<wbr>``
+ * after each slash in the filtered content.
+ */
+function breakslash( $text )
+{
+    // Finds forward slash not preceded by < to avoid borking tags
+    $slash_finder = "/(\S*?)(?<!<)\//i";
+                    
+    return preg_replace($slash_finder, '$1/<wbr>', $text);
+}
+
+/**
  * typogrify
  * 
  * The super typography filter.   
@@ -235,6 +249,7 @@ function widont( $text )
  */
 function typogrify( $text, $do_guillemets = false )
 {
+    $text = breakslash( $text );
     $text = amp( $text );
     $text = widont( $text );
     $text = SmartyPants( $text );
