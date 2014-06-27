@@ -85,7 +85,7 @@ class TypogrifyTwigExtension extends \Twig_Extension
     {
         $charset = craft()->templates->getTwig()->getCharset();
 
-        $str = amp($str);
+        $str = breakslash($str);
 
         return new \Twig_Markup($str, $charset);
     }
