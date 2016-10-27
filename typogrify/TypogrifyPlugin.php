@@ -22,6 +22,12 @@ class TypogrifyPlugin extends BasePlugin
     {
         return 'http://withchief.com';
     }
+    
+    public function init()
+    {
+        Craft::import('plugins.typogrify.lib.smartypants');
+        Craft::import('plugins.typogrify.lib.php-typogrify');
+    }
 
     public function addTwigExtension()
     {
