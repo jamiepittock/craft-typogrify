@@ -23,6 +23,18 @@ Or:
     	<p>Your text here</p>
     {% endfilter %}
 
+### Breakslash
+
+Allows the browser to break a line at a forward slash.
+
+    {{ content|breakslash }}
+    
+Or:
+
+    {% filter breakslash %}
+    	<p>Your text here</p>
+    {% endfilter %}
+
 ### Caps
 
 Wraps multiple capital letters in `<span class="caps">` so they can be styled with CSS. 
